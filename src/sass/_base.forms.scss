@@ -1,0 +1,42 @@
+::-webkit-input-placeholder,::-moz-placeholder,:-moz-placeholder,:-ms-input-placeholder{
+   color: $placeholder;
+}
+.form__div{
+  @include rem-fallback(margin,2.5,0);
+}
+.form__label{
+  color:$label-color;
+  font-weight:700;
+  text-transform: uppercase;
+  display:block;
+  @include rem-fallback(margin-bottom,0.8);
+}
+.form__text,.form__email{
+  background:none;
+  border: 1px solid $placeholder;
+  border-width:0 0 1px 0;
+  @include rem-fallback(font-size,1.1);
+  @include rem-fallback(padding-left,1);
+  color:$input-color;
+  display:block;
+  width:100%;
+  &:focus{
+    border-color:#9aa458;
+  }
+}
+.form__area{
+  background:none;
+  border: 1px solid $placeholder;
+  border-width:0 0 1px 1px;
+  width:100%;
+  @include rem-fallback(height,5);
+  display:block;
+  @include rem-fallback(padding-left,1);
+  color:$input-color;
+  &:focus{
+    border-color:#9aa458;
+  }
+}
+.input__submit{
+  color:$light-link-color;
+}

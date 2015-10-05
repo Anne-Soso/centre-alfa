@@ -4,7 +4,7 @@
   padding:30px 25%;
   color:$link-color;
   @include rem-fallback(font-size,1.3rem);
-  @include rem-fallback(margin,1.5rem,0rem);
+  @include rem-fallback(margin,2rem,0rem,1rem);
   font-weight: 400;
 }
 .page-head__tel{

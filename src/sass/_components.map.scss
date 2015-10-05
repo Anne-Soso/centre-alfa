@@ -3,3 +3,6 @@
   height:400px;
   @include rem-fallback(margin,1rem,0,4rem);
 }
+.map{
+  @include rem-fallback(margin-top,4rem);
+}

@@ -650,8 +650,8 @@ a {
   color: #c2725d;
   font-size: 23.4px;
   font-size: 1.3rem;
-  margin: 27px 0px;
-  margin: 1.5rem 0rem;
+  margin: 36px 0px 18px;
+  margin: 2rem 0rem 1rem;
   font-weight: 400;
 }
 
@@ -676,6 +676,7 @@ a {
 
 .news {
   position: relative;
+  padding-right: 30px;
 }
 
 .news__item {
@@ -698,7 +699,7 @@ a {
   margin: 0rem 2rem 0rem 1rem;
   font-weight: 300;
   line-height: 1;
-  height: 100px;
+  height: 130px;
   font-family: "Roboto Condensed", sans-serif;
 }
 
@@ -753,6 +754,11 @@ a {
   height: 400px;
   margin: 18px 0px 72px;
   margin: 1rem 0rem 4rem;
+}
+
+.map {
+  margin-top: 72px;
+  margin-top: 4rem;
 }
 
 .hidden-title {

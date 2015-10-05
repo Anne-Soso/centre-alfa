@@ -1,0 +1,8 @@
+.news{
+  position:relative;
+}
+.news__item{
+  @include rem-fallback(padding,1.5rem,0);
+  border-bottom: 1px solid $border-color;
+  list-style: none;
+}

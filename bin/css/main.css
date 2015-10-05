@@ -730,6 +730,17 @@ a {
   height: 50px;
 }
 
+.news {
+  position: relative;
+}
+
+.news__item {
+  padding: 27px 0px;
+  padding: 1.5rem 0rem;
+  border-bottom: 1px solid #e3ecef;
+  list-style: none;
+}
+
 .hidden-title {
   position: absolute;
   left: -10000px;

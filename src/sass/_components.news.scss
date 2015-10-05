@@ -5,4 +5,18 @@
   @include rem-fallback(padding,1.5rem,0);
   border-bottom: 1px solid $border-color;
   list-style: none;
+  &:last-child{
+    border:none;
+  }
+}
+.news__date{
+  color:$nav-color;
+  float:left;
+  display:block;
+  @include rem-fallback(font-size,2.7);
+  @include rem-fallback(margin,0rem, 2rem,0,1rem);
+  font-weight: 300;
+  line-height: 1;
+  height:100px;
+  font-family: $font-title;
 }

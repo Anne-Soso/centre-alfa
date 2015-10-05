@@ -17,6 +17,19 @@ block content
           | Notre antenne de Réduction des risques "Accueil Drogues" a déménagé au 22 de la rue Florimont (Liège) où une permanence est assurée, comme par le passé : du lundi au vendredi de 13h à 17h
         li.news__item
           time.news__date 30/09/2015
-          | Vous vous posez des questions au sujet de votre consommation d'alcool, ou celle d'un proche ?
-    h2 Contactez-nous
-    h2 Où nous trouver ?
+          | Vous vous posez des questions au sujet de votre consommation d'alcool, ou celle d'un proche ?&nbsp;
+          a(href="http://aide-alcool.be") aide-alcool.be
+    section.contact
+      h2 Contactez-nous
+      form(method="get" action="#").form
+        label(for="name").form__label Nom
+        input(type="text" id="name" name="email").form__text
+        label(for="email").form__label Adresse Email
+        input(type="email" id="email" name="email" ).form__text
+        label(for="objet").form__label Objet du message
+        input(type="text" id="objet" name="objet").form__text
+        label(for="message").form__label Message
+        textarea(name="message",id="message", cols="30", rows="7").form__area
+        input(type="submit").form__submit.button
+    section.map
+      h2 Où nous trouver ?

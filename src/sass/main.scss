@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700,400italic,700italic|Roboto:400,400italic,700,700italic,500,500italic);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700,400italic,700italic|Roboto:300,400,400italic,700,700italic,500,500italic);
 @import "bourbon";
 
 @import  "settings.default";
@@ -15,7 +15,6 @@
 @import "generic.reset";
 @import "generic.box-sizing";
 
-@import "base.forms";
 @import "base.page";
 @import "base.headings";
 @import "base.paragraphs";
@@ -35,6 +34,7 @@
 @import "components.site-nav";
 @import "components.page-head";
 @import "components.news";
+@import "components.form";
 
 @import "trumps.hidden";
 @import "bower_components/inuit-widths/trumps.widths";

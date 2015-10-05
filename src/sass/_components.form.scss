@@ -1,0 +1,40 @@
+.form__label{
+  @include rem-fallback(margin,1.2,0,0.4,0);
+  @include rem-fallback(font-size,1.2);
+  color:$label-color;
+  font-weight: 300;
+  display:block;
+}
+.form__text{
+  display:block;
+  width:100%;
+  border: 1px solid $border-color;
+  border-width:0px 0px 2px 0px;
+  @include rem-fallback(padding,0,0.4,0.4,0.4);
+  &:focus{
+    border-bottom:2px solid $link-color;
+    box-shadow: none;
+    outline:none;
+  }
+}
+.form__area{
+  @extend .form__text;
+  border-width: 0px 0px 2px 2px;
+  &:focus{
+    border-color:$link-color;
+    border-width:0 0 2px 2px;
+  }
+}
+
+.form__submit{
+  border:none;
+  display:inline-block;
+  @include rem-fallback(margin,2,0,0,0);
+  @include rem-fallback(font-size,1.2);
+  padding-left:50px;
+  padding-right:50px;
+  &:focus{
+    outline:none;
+  }
+
+}

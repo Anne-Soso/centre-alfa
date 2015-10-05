@@ -1,13 +1,11 @@
 .button{
-  background:none;
+  background:$background-color;
   border:1px solid;
   padding:10px 30px;
-  color:#68703b;
-  border-radius:4px;
+  color:white;
   @include transition(all 0.7s ease-in-out);
   &:hover{
-    background: $background-color;
-    border-color: $background-color;
-    color:white;
+    background: $heading-color;
+
   }
 }

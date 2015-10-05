@@ -1,4 +1,24 @@
-header.page-head
+div.page-head
   div.wrapper
     nav.site-nav
       h2(role="heading" aria-level="2").hidden-title Navigation du Site
+      a(href="index.html").site-nav__home
+        include logo.svg
+      div.float-right
+        a(href="a-propos.html").site-nav__link.site-nav__link--about 
+          include info28.svg
+          | À propos
+        a(href="prevention.html").site-nav__link.site-nav__link--prevent 
+          include teacher44.svg
+          |Prévention
+        a(href="therapie.html").site-nav__link.site-nav__link--therap 
+          include medicine14.svg
+          | Thérapie
+        a(href="parentalite.html").site-nav__link.site-nav__link--parent 
+          include avatar4.svg
+          | Parentalité
+        a(href="risques").site-nav__link.site-nav__link--risk 
+          include warning41.svg
+          | Réduction des risques
+    div.page-head__pres Service de santé mentale spécialisé dans le traitement et la prévention de l'alcoolisme et des toxicomanies.
+      div.page-head__tel Téléphonez au 04 223 09 03

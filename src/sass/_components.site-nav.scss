@@ -1,0 +1,33 @@
+.site-nav{
+  padding:25px 0;
+}
+
+.site-nav__link{
+  @include rem-fallback(margin-left,3.2rem);
+  @include rem-fallback(font-size,1.4rem);
+  font-family: $font-title;
+  color:$nav-color;
+  display: inline-block;
+  text-align: center;
+  font-weight: 300;
+  @include transition(all 0.5s);
+  &:hover{
+    color:$text-color;
+    svg{
+      opacity:0.7;
+    }
+  }
+}
+.site-nav__link svg{
+  display:block;
+  margin:10px auto 10px;
+  width:50px;
+  @include transition(all 0.5s);
+  height:50px;
+}
+.site-nav__link--parent svg{
+  position:relative;
+  top:5px;
+}
+.site-nav__link--about{
+}

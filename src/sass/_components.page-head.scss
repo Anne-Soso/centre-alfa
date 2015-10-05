@@ -1,0 +1,24 @@
+.page-head__pres{
+  background: $light-background;
+  text-align: center;
+  padding:30px 25%;
+  color:$link-color;
+  @include rem-fallback(font-size,1.3rem);
+  @include rem-fallback(margin,1.5rem,0rem);
+  font-weight: 300;
+}
+.page-head__tel{
+  color:$tel-color;
+  @include rem-fallback(font-size,1.8rem);
+  @include rem-fallback(margin,1rem,0,0);
+  &:before{
+    background: url('img/phone21.svg')center bottom;
+    position:relative;
+    top:10px;
+    @include rem-fallback(margin,0,1rem,0,0);
+    content:" ";
+    display:inline-block;
+    width:50px;
+    height:50px;
+  }
+}

@@ -1,0 +1,39 @@
+.page-footer{
+  background: $nav-color;
+}
+.page-footer__list{
+  text-align:center;
+  @include rem-fallback(padding,1.8rem,0,1.8rem,0);
+  border-bottom:1px solid $footer-color;
+  margin-bottom:1.8rem;
+
+}
+.page-footer__item{
+  list-style: none;
+  @include rem-fallback(margin,0,0,0,2);
+  display:inline-block;
+  &:first-child{
+    margin-left:0;
+  }
+}
+.page-footer__link{
+  color:white;
+  display:block;
+  @include rem-fallback(font-size,1.8);
+  font-family: $font-title;
+  font-weight:300;
+  text-transform: uppercase;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.page-footer__right{
+  color:#b2dde7;
+  text-align: center;
+  @include rem-fallback(padding-bottom,1.8rem);
+  a{
+    color:white;
+    text-decoration: none;
+  }
+}

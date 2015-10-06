@@ -5,9 +5,10 @@ block title
 block header
   include includes/header.jade
 block content
+  include includes/pres-accueil.jade
   div.wrapper
     section.news.layout
-      h2.layout__item News
+      h2.layout__item Actualités du Centre
       ul(class="layout__item u-2/3")
         li.news__item
           time.news__date 13/10/2015
@@ -19,7 +20,7 @@ block content
           time.news__date 30/09/2015
           | Vous vous posez des questions au sujet de votre consommation d'alcool, ou celle d'un proche ?&nbsp;
           a(href="http://aide-alcool.be") aide-alcool.be
-    section.contact
+    //section.contact
       h2 Contactez-nous
       form(method="get" action="#").form
         label(for="name").form__label Nom
@@ -33,4 +34,5 @@ block content
         input(type="submit").form__submit.button
     section.map
       h2 Où nous trouver ?
+      address.map__address Rue de la Madeleine, 4000 Liège
       div(id="contactMap").map__container

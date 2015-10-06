@@ -1,15 +1,24 @@
 .site-nav{
   padding:25px 0;
 }
-
-.site-nav__link{
+.site-nav__item{
+  display:inline-block;
+  position:relative;
   @include rem-fallback(margin-left,3.2rem);
+  &:hover{
+    .site-nav__submenu{
+      display:block;
+    }
+  }
+}
+.site-nav__link{
   @include rem-fallback(font-size,1.4rem);
   font-family: $font-title;
   color:$nav-color;
   display: inline-block;
   text-align: center;
   text-decoration: none;
+  background: white;
   font-weight: 300;
   @include transition(all 0.5s);
   &:hover{
@@ -19,6 +28,11 @@
     }
   }
 }
+
+.site-nav__home{
+  display: inline-block;
+  @include rem-fallback(margin-top,0.2);
+}
 .site-nav__link svg{
   display:block;
   margin:10px auto 10px;
@@ -26,9 +40,33 @@
   @include transition(all 0.5s);
   height:50px;
 }
+
 .site-nav__link--parent svg{
   position:relative;
   top:5px;
 }
-.site-nav__link--about{
+.site-nav__submenu{
+  position:absolute;
+  left:50%;
+  margin-left:-125px;
+  padding-top:25px;
+  display:none;
+
+}
+.site-nav__subitem{
+  list-style:none;
+  background: $link-color;
+  margin-bottom:2px;
+  @include transition(all 0.3s);
+  &:hover{
+    background: $nav-color;
+  }
+}
+.site-nav__sublink{
+  padding:10px 17px;
+  width:250px;
+  color:white;
+  font-weight: 300;
+  text-decoration: none;
+  display:block;
 }

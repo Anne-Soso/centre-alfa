@@ -1,6 +1,7 @@
 .news{
   position:relative;
   padding-right:30px;
+  @include rem-fallback(margin-top,1rem);
 }
 .news__item{
   @include rem-fallback(padding,1.5rem,0);
@@ -8,6 +9,7 @@
   list-style: none;
   &:last-child{
     border:none;
+    padding-bottom:0px;
   }
 }
 .news__date{

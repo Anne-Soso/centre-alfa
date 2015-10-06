@@ -1,8 +1,15 @@
 .map__container{
   width:100%;
   height:400px;
-  @include rem-fallback(margin,1rem,0,4rem);
+  @include rem-fallback(margin,1.3rem,0,4rem);
 }
 .map{
-  @include rem-fallback(margin-top,4rem);
+  @include rem-fallback(margin-top,0rem);
+}
+
+.map__address{
+  @include rem-fallback(font-size,1.8rem);
+  @include rem-fallback(margin,0);
+  font-style:normal;
+  color:$tel-color;
 }

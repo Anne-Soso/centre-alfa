@@ -51,6 +51,23 @@
            } );
        }
        generateGoogleMap();
+       var isScrolled= false;
+       $(window).scroll(function() {
+
+          var headerH = $('.page-head').outerHeight(true);
+          console.log(headerH);
+      //this will calculate header's full height, with borders, margins, paddings
+          var scrollVal = $(this).scrollTop();
+           if ( (scrollVal > headerH) && !isScrolled) {
+             $('.site-nav').addClass('fixed');
+               $('.page-head').css('display','none').addClass('fixed').fadeIn();
+
+               isScrolled=true;
+           } else {
+               $('#subnav').css({'position':'static','top':'0px'});
+           }
+       });
+
 
     } );
 

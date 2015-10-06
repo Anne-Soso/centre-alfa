@@ -11,6 +11,27 @@
     }
   }
 }
+.site-nav.fixed{
+  padding:15px 0;
+  .site-nav__link svg{
+    width:30px;
+    height:30px;
+    margin:0 auto;
+  }
+  .site-nav__link{
+    @include rem-fallback(font-size,1.2rem);
+  }
+  .site-nav__logo{
+    width:100px;
+    height:70px;
+  }
+  .site-nav__submenu{
+    padding-top:14px;
+  }
+  .site-nav__item{
+    @include rem-fallback(margin-top,0.8rem);
+  }
+}
 .site-nav__link{
   @include rem-fallback(font-size,1.4rem);
   font-family: $font-title;
@@ -32,6 +53,7 @@
 .site-nav__home{
   display: inline-block;
   @include rem-fallback(margin-top,0.2);
+  text-decoration: none;
 }
 .site-nav__link svg{
   display:block;

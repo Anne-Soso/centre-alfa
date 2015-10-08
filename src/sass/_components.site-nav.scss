@@ -26,7 +26,7 @@
     height:70px;
   }
   .site-nav__submenu{
-    padding-top:14px;
+    padding-top:20px;
   }
   .site-nav__item{
     @include rem-fallback(margin-top,0.8rem);
@@ -71,7 +71,8 @@
   position:absolute;
   left:50%;
   margin-left:-125px;
-  padding-top:25px;
+  z-index:100;
+  padding-top:16px;
   display:none;
 
 }
@@ -79,6 +80,7 @@
   list-style:none;
   background: $link-color;
   margin-bottom:2px;
+  margin-top:0;
   @include transition(all 0.3s);
   &:hover{
     background: $nav-color;

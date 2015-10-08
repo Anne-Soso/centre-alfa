@@ -1,0 +1,20 @@
+.paginate__prev{
+background-image: url('img/directional30.svg');
+background-position: 10% center;
+background-repeat:no-repeat;
+  padding:10px 15px 10px 50px;
+    background-size: 23px;
+}
+
+.paginate__next{
+  background-image: url('img/directional27.svg');
+  background-position: 90% center;
+  background-repeat:no-repeat;
+  background-size: 23px;
+  padding:10px 50px 10px 15px;
+}
+
+.paginate{
+  @include rem-fallback(margin,1.7,0);
+  @include rem-fallback(font-size,0.9);
+}

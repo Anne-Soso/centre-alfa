@@ -3,9 +3,10 @@
   border:1px solid;
   padding:10px 30px;
   color:white;
+  text-decoration: none;
   @include transition(all 0.4s ease-in-out);
   &:hover{
-    background: $heading-color;
+    background-color: $heading-color;
 
   }
 }

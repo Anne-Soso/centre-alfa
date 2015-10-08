@@ -3,13 +3,17 @@
   color:$link-color;
   @include rem-fallback(font-size,1.3rem);
   font-weight: 400;
-  padding: 170px 0;
+  padding: 20px 10% 50px;
+  background: $background-pres;
+}
+.pres--accueil{
   background:url('img/sad.jpg') center top;
   background-size: cover;
+  padding:160px 0;
 }
 .pres__wrapper{
   background: rgba(255,255,255,0.85);
-  padding:70px 12% 90px;
+  padding:50px 12% 50px;
 }
 .pres__text{
   width:70%;
@@ -31,7 +35,7 @@
   }
 }
 .pres__form{
-  @include rem-fallback(margin-top,3rem);
+  @include rem-fallback(margin-top,2.4rem);
 }
 .pres__label{
   display:inline-block;

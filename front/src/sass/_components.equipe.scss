@@ -1,0 +1,18 @@
+.equipe__item{
+  margin-right:5%;
+  text-align: center;
+}
+.equipe__img{
+  width:100%;
+}
+.equipe__item:nth-child(3n){
+  margin-right:0;
+}
+.equipe__nom{
+  font-weight:400;
+  @include rem-fallback(margin,0.7,0,0);
+}
+.equipe__poste{
+  color:$nav-color;
+  @include rem-fallback(margin,0.3,0,1);
+}

@@ -1,0 +1,38 @@
+extends includes/layout.jade
+block title
+  title Equipe
+block content
+  include includes/pres.jade
+  div.page-wrap.wrapper
+    div.main-content.layout
+      div(class="layout__item u-1/3").main-content__side
+       nav.side-menu
+         h2.hidden-title Navigation dans les articles
+         h3.side-menu__title A propos
+         ul
+           li.side-menu__item
+             a(href="#").side-menu__link Contact
+           li.side-menu__item
+             a(href="#").side-menu__link.side-menu__link--active Les équipes
+           li.side-menu__item
+             a(href="#").side-menu__link Tarifs
+      div(class="layout__item u-2/3").main-content__main
+        h1 Les équipes
+        h2.subtitle La Direction
+        div.equipe.layout
+          div(class="layout__item u-3/10").equipe__item
+            img(src="img/equipe.png", alt="").equipe__img
+            h3.equipe__nom Christian Figiel
+            p.equipe__poste Médecin-directeur
+          div(class="layout__item u-3/10").equipe__item
+            img(src="img/equipe.png", alt="").equipe__img
+            h3.equipe__nom Christian Figiel
+            p.equipe__poste Médecin-directeur
+          div(class="layout__item u-3/10").equipe__item
+            img(src="img/equipe.png", alt="").equipe__img
+            h3.equipe__nom Christian Figiel
+            p.equipe__poste Médecin-directeur
+        div.clearfix.paginate
+          a(href="").paginate__prev.button.float-left Contact
+          a(href="#").paginate__next.button.float-right Liens
+      

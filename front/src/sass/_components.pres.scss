@@ -1,0 +1,68 @@
+.pres{
+  text-align: center;
+  color:$link-color;
+  @include rem-fallback(font-size,1.3rem);
+  font-weight: 400;
+  padding: 20px 0 50px;
+  background: $background-pres;
+}
+.pres--accueil{
+  background:url('img/sad.jpg') center top;
+  background-size: cover;
+  padding:160px 0;
+}
+.pres__wrapper{
+  background: rgba(255,255,255,0.85);
+  padding:50px 12% 50px;
+}
+.pres__text{
+  margin:auto;
+}
+.pres__tel{
+  color:$tel-color;
+  @include rem-fallback(font-size,1.8rem);
+  @include rem-fallback(margin,0.8rem,0,0);
+  &:before{
+    background: url('img/phone21.svg')center bottom;
+    position:relative;
+    top:10px;
+    @include rem-fallback(margin,0,1rem,0,0);
+    content:" ";
+    display:inline-block;
+    width:50px;
+    height:50px;
+  }
+}
+.pres__form{
+  @include rem-fallback(margin-top,2.4rem);
+  text-align: left;
+}
+.pres__label{
+  display:inline-block;
+  width:30%;
+  @include rem-fallback(font-size,1.4rem);
+  margin:0 3% 0 0;
+  text-align: right;
+  font-weight:400;
+}
+.pres__label--accueil{
+  width:20%;
+  text-align: left;
+}
+.pres__input{
+  display:inline-block;
+  padding:10px;
+  width:40%;
+}
+.pres__input--accueil{
+  width:52%;
+}
+.pres__submit{
+  margin:0 0 0 2%;
+  @include rem-fallback(font-size,1.3rem);
+  display:inline-block;
+  width:25%;
+}
+.pres__submit--accueil{
+  width:22%;
+}

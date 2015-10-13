@@ -1,0 +1,15 @@
+
+h1,h2{
+  color : $heading-color;
+  font-family: $font-title;
+  font-weight:400;
+  @include rem-fallback(margin,2,0,1.2);
+  @include rem-fallback(font-size, 2.4);
+}
+.subtitle{
+  color : $subtitle-color;
+  font-family: $font-title;
+  font-weight:400;
+  @include rem-fallback(margin,0,0,2);
+  @include rem-fallback(font-size, 1.7);
+}

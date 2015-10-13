@@ -40,12 +40,12 @@ function register_my_menus() {
       'supports'  => array( 'title', 'editor' )
       )
    );
-   register_post_type( 'equipes',
+   register_post_type( 'employes',
        array(
            'labels' => array(
-               'name' => __( 'Équipe' ),
-               'singular_name' => __( 'Membre' ),
-               'add_new_item' => __('Ajouter un nouveau membre')
+               'name' => __( 'Employés' ),
+               'singular_name' => __( 'Employé' ),
+               'add_new_item' => __('Ajouter un nouvel employé')
            ),
        'public' => true,
        'has_archive' => false,
@@ -53,6 +53,28 @@ function register_my_menus() {
        )
     );
   }
+
+  function create_tax() {
+  	register_taxonomy(
+  		'equipes',
+  		'employes',
+  		array(
+  			'label' => __( 'Équipes' ),
+  			'rewrite' => array( 'slug' => 'equipes' ),
+  			'hierarchical' => true,
+  		)
+  	);
+    register_taxonomy(
+      'fonction',
+      'employes',
+      array(
+        'label' => __( 'Fonction' ),
+        'rewrite' => array( 'slug' => 'fonction' ),
+        'hierarchical' => true,
+      )
+    );
+  }
  add_action( 'init', 'create_post_types' );
  add_action( 'init', 'register_my_menus' );
  add_filter('admin_init', 'my_general_settings_register_fields');
+ add_action( 'init', 'create_tax' );

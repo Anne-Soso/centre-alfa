@@ -39,7 +39,8 @@ module.exports = function( grunt ) {
 					"loadPath": require('node-bourbon').includePaths
 				},
 				"files": {                         // Liste des fichiers
-					"bin/css/main.css": "src/sass/main.scss"
+					"bin/css/main.css": "src/sass/main.scss",
+					"../wordpress/wp-content/themes/centrealfa/style.css": "src/sass/main.scss"
 				}
 			}
 		},

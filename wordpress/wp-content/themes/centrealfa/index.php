@@ -9,21 +9,23 @@
       --><input type="text" id="keywords" name="keywords" class="form__text pres__input pres__input--accueil"><!--
       --><input type="submit" value="Rechercher" class="form__submit button pres__submit pres__submit--accueil">
     </form>
+  <!-- <?php get_search_form( true ); ?> -->
   </div>
 </div>
 <div class="wrapper">
   <section class="news layout">
     <h2 class="layout__item">Actualités du Centre</h2>
     <ul class="layout__item u-2/3">
-      <li class="news__item">
-        <time class="news__date">13/10/2015</time>Nous sommes désormais au complet pour les stages concernant l'année scolaire 2015-2016. Bonne chance à tous les étudiants dans la poursuite de leur recherche !
-      </li>
-      <li class="news__item">
-        <time class="news__date">10/10/2015</time>Notre antenne de Réduction des risques "Accueil Drogues" a déménagé au 22 de la rue Florimont (Liège) où une permanence est assurée, comme par le passé : du lundi au vendredi de 13h à 17h
-      </li>
-      <li class="news__item">
-        <time class="news__date">30/09/2015</time>Vous vous posez des questions au sujet de votre consommation d'alcool, ou celle d'un proche ?&nbsp;<a href="http://aide-alcool.be">aide-alcool.be</a>
-      </li>
+      <?php $args = array( 'post_type' => 'news' );
+      $the_query = new WP_Query( $args );
+
+      if ( $the_query->have_posts() ) :
+        while ( $the_query->have_posts() ) : $the_query->the_post();?>
+        <li class="news__item layout">
+          <time class="news__date layout__item u-1/4"><?php the_time('d/m/y');?></time><!--
+          --><div class="layout__item u-3/4"><?php the_content();?></div>
+        </li>
+      <?php endwhile;endif;?>
     </ul>
   </section>
   <section class="map">
@@ -31,5 +33,9 @@
     <address class="map__address"><?php echo get_option('adresse');?></address>
     <div id="contactMap" class="map__container"></div>
   </section>
+  <script type="text/javascript">
+    var addressRdv="<?php echo get_option('adresse');?>";
+    var markerMap="<?php echo get_template_directory_uri(); ?>"+'/img/marker-map.svg';
+  </script>
 </div>
 <?php get_footer();?>

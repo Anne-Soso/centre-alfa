@@ -11,15 +11,15 @@
     border:none;
     padding-bottom:0px;
   }
+  p{
+    margin:0;
+  }
 }
 .news__date{
   color:$nav-color;
-  float:left;
-  display:block;
   @include rem-fallback(font-size,2.7);
-  @include rem-fallback(margin,0rem, 2rem,0,1rem);
+  @include rem-fallback(margin-bottom,1rem);
   font-weight: 300;
   line-height: 1;
-  height:130px;
   font-family: $font-title;
 }

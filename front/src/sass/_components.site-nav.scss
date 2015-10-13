@@ -1,45 +1,46 @@
 .site-nav{
-  padding:25px 0;
+  padding:15px 0 25px;
 }
-.site-nav__item{
+.menu-item{
   display:inline-block;
   position:relative;
-  @include rem-fallback(margin-left,3.2rem);
+  margin-top:0;
+  @include rem-fallback(margin-left,3rem);
   &:hover{
-    .site-nav__submenu{
+    .sub-menu{
       display:block;
     }
   }
 }
 .site-nav.fixed{
   padding:15px 0;
-  .site-nav__link svg{
+  .menu-item>a svg{
     width:30px;
     height:30px;
     margin:0 auto;
   }
-  .site-nav__link{
+  .menu-item>a{
     @include rem-fallback(font-size,1.2rem);
   }
   .site-nav__logo{
     width:100px;
     height:70px;
   }
-  .site-nav__submenu{
+  .sub-menu{
     padding-top:20px;
   }
-  .site-nav__item{
+  .menu-item{
     @include rem-fallback(margin-top,0.8rem);
   }
 }
-.site-nav__link{
+.menu-item>a{
   @include rem-fallback(font-size,1.4rem);
   font-family: $font-title;
+  padding-top:70px;
   color:$nav-color;
   display: inline-block;
   text-align: center;
   text-decoration: none;
-  background: white;
   font-weight: 300;
   @include transition(all 0.5s);
   &:hover{
@@ -55,19 +56,8 @@
   @include rem-fallback(margin-top,0.2);
   text-decoration: none;
 }
-.site-nav__link svg{
-  display:block;
-  margin:10px auto 10px;
-  width:50px;
-  @include transition(all 0.5s);
-  height:50px;
-}
 
-.site-nav__link--parent svg{
-  position:relative;
-  top:5px;
-}
-.site-nav__submenu{
+.sub-menu{
   position:absolute;
   left:50%;
   margin-left:-125px;
@@ -76,21 +66,46 @@
   display:none;
 
 }
-.site-nav__subitem{
+.sub-menu>li{
   list-style:none;
   background: $link-color;
-  margin-bottom:2px;
-  margin-top:0;
+  margin:0 0 2px 0;
   @include transition(all 0.3s);
   &:hover{
     background: $nav-color;
   }
 }
-.site-nav__sublink{
+.sub-menu>li>a{
   padding:10px 17px;
   width:250px;
   color:white;
+  text-align: left;
+  @include rem-fallback(font-size,1.2);
   font-weight: 300;
-  text-decoration: none;
+  text-decoration:none;
   display:block;
+  &:hover{
+    color: white;
+  }
+}
+
+.about{
+  background:url('img/info28.svg') no-repeat center top;
+  background-size:60px;
+}
+.prevent{
+  background:url('img/teacher44.svg') no-repeat center top;
+  background-size:60px;
+}
+.therap{
+  background:url('img/medicine14.svg') no-repeat center top;
+  background-size:60px;
+}
+.parent{
+  background:url('img/avatar4.svg') no-repeat center 10px;
+  background-size:60px;
+}
+.risk{
+  background:url('img/warning41.svg') no-repeat center top;
+  background-size:60px;
 }

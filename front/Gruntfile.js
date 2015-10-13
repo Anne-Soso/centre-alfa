@@ -13,7 +13,7 @@ module.exports = function( grunt ) {
 		"jade": {
 			"html": {
 				"options": {
-					"pretty": false, // - Change value to have lisible HTML
+					"pretty": true, // - Change value to have lisible HTML
 					"data": {
 						"debug": false,
 					},
@@ -28,7 +28,8 @@ module.exports = function( grunt ) {
 		"uglify": {
 			"scripts": {
 				"files": {
-					"bin/js/script-min.js": "src/js/script.js"
+					"bin/js/script-min.js": "src/js/script.js",
+					"../wordpress/wp-content/themes/centrealfa/js/script.js": "src/js/script.js"
 				}
 			}
 		},

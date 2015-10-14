@@ -2,7 +2,8 @@
 function register_my_menus() {
   register_nav_menus(
     array(
-      'header-menu' => __( 'Header Menu','centrealfa') //fait la correspondance entre la localisation du menu et un nom plus user-friendly pour l'admin
+      'header-menu' => __( 'Header Menu','centrealfa'), //fait la correspondance entre la localisation du menu et un nom plus user-friendly pour l'admin
+      'footer-menu' => __( 'Footer Menu','centrealfa' )
      )
    );
  }
@@ -74,6 +75,19 @@ function register_my_menus() {
       )
     );
   }
+
+  function remove_menu_items() {
+     global $menu;
+     $restricted = array(__('Posts'),__('Comments'));
+     end ($menu);
+     while (prev($menu)){
+       $value = explode(' ',$menu[key($menu)][0]);
+       if(in_array($value[0] != NULL?$value[0]:"" , $restricted)){
+       unset($menu[key($menu)]);}
+     }
+   }
+
+ add_action('admin_menu', 'remove_menu_items');
  add_action( 'init', 'create_post_types' );
  add_action( 'init', 'register_my_menus' );
  add_filter('admin_init', 'my_general_settings_register_fields');

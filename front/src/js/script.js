@@ -55,7 +55,6 @@
        $(window).scroll(function() {
 
           var headerH = $('.page-head').outerHeight(true);
-          console.log(headerH);
       //this will calculate header's full height, with borders, margins, paddings
           var scrollVal = $(this).scrollTop();
            if ( (scrollVal > headerH) && !isScrolled) {

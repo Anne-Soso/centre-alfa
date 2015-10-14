@@ -617,20 +617,98 @@ a {
 .site-nav {
   padding: 15px 0 25px;
 }
-
-.menu-item {
+.site-nav .menu-item {
   display: inline-block;
   position: relative;
   margin-top: 0;
   margin-left: 54px;
   margin-left: 3rem;
 }
-.menu-item:hover .sub-menu {
+.site-nav .menu-item:hover .sub-menu {
   display: block;
+}
+.site-nav .menu-item > a {
+  font-size: 25.2px;
+  font-size: 1.4rem;
+  font-family: "Roboto Condensed", sans-serif;
+  padding-top: 70px;
+  color: #7fa2aa;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 300;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.site-nav .menu-item > a:hover {
+  color: #484a57;
+}
+.site-nav .menu-item > a:hover svg {
+  opacity: 0.7;
+}
+.site-nav .site-nav__home {
+  display: inline-block;
+  margin-top: 3.6px;
+  margin-top: 0.2rem;
+  text-decoration: none;
+}
+.site-nav .sub-menu {
+  position: absolute;
+  left: 50%;
+  margin-left: -125px;
+  z-index: 100;
+  padding-top: 25px;
+  display: none;
+}
+.site-nav .sub-menu > li {
+  list-style: none;
+  background: #c2725d;
+  margin: 0 0 2px 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.site-nav .sub-menu > li:hover {
+  background: #7fa2aa;
+}
+.site-nav .sub-menu > li > a {
+  padding: 10px 17px;
+  width: 250px;
+  color: white;
+  text-align: left;
+  font-size: 21.6px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-decoration: none;
+  display: block;
+}
+.site-nav .sub-menu > li > a:hover {
+  color: white;
+}
+.site-nav .about {
+  background: url("img/info28.svg") no-repeat center top;
+  background-size: 60px;
+}
+.site-nav .prevent {
+  background: url("img/teacher44.svg") no-repeat center top;
+  background-size: 60px;
+}
+.site-nav .therap {
+  background: url("img/medicine14.svg") no-repeat center top;
+  background-size: 60px;
+}
+.site-nav .parent {
+  background: url("img/avatar4.svg") no-repeat center 10px;
+  background-size: 60px;
+}
+.site-nav .risk {
+  background: url("img/warning41.svg") no-repeat center top;
+  background-size: 60px;
 }
 
 .site-nav.fixed {
-  padding: 30px 0 15px;
+  padding: 25px 0 15px;
 }
 .site-nav.fixed > ul > .menu-item > a {
   font-size: 21.6px;
@@ -647,95 +725,6 @@ a {
 .site-nav.fixed .menu-item {
   margin-bottom: 2px;
   background-size: 40px;
-}
-
-.menu-item > a {
-  font-size: 25.2px;
-  font-size: 1.4rem;
-  font-family: "Roboto Condensed", sans-serif;
-  padding-top: 70px;
-  color: #7fa2aa;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 300;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  transition: all 0.5s;
-}
-.menu-item > a:hover {
-  color: #484a57;
-}
-.menu-item > a:hover svg {
-  opacity: 0.7;
-}
-
-.site-nav__home {
-  display: inline-block;
-  margin-top: 3.6px;
-  margin-top: 0.2rem;
-  text-decoration: none;
-}
-
-.sub-menu {
-  position: absolute;
-  left: 50%;
-  margin-left: -125px;
-  z-index: 100;
-  padding-top: 25px;
-  display: none;
-}
-
-.sub-menu > li {
-  list-style: none;
-  background: #c2725d;
-  margin: 0 0 2px 0;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.sub-menu > li:hover {
-  background: #7fa2aa;
-}
-
-.sub-menu > li > a {
-  padding: 10px 17px;
-  width: 250px;
-  color: white;
-  text-align: left;
-  font-size: 21.6px;
-  font-size: 1.2rem;
-  font-weight: 300;
-  text-decoration: none;
-  display: block;
-}
-.sub-menu > li > a:hover {
-  color: white;
-}
-
-.about {
-  background: url("img/info28.svg") no-repeat center top;
-  background-size: 60px;
-}
-
-.prevent {
-  background: url("img/teacher44.svg") no-repeat center top;
-  background-size: 60px;
-}
-
-.therap {
-  background: url("img/medicine14.svg") no-repeat center top;
-  background-size: 60px;
-}
-
-.parent {
-  background: url("img/avatar4.svg") no-repeat center 10px;
-  background-size: 60px;
-}
-
-.risk {
-  background: url("img/warning41.svg") no-repeat center top;
-  background-size: 60px;
 }
 
 .page-head {
@@ -940,26 +929,16 @@ a {
   background: #7fa2aa;
   height: 200px;
 }
-
-.page-footer__list {
-  text-align: center;
-  padding: 32.4px 0px 32.4px 0px;
-  padding: 1.8rem 0rem 1.8rem 0rem;
-  border-bottom: 1px solid #9ccad4;
-  margin-bottom: 1.8rem;
-}
-
-.page-footer__item {
+.page-footer .menu-item {
   list-style: none;
   margin: 0px 0px 0px 36px;
   margin: 0rem 0rem 0rem 2rem;
   display: inline-block;
 }
-.page-footer__item:first-child {
+.page-footer .menu-item:first-child {
   margin-left: 0;
 }
-
-.page-footer__link {
+.page-footer .menu-item a {
   color: white;
   display: block;
   font-size: 32.4px;
@@ -969,15 +948,23 @@ a {
   text-transform: uppercase;
   text-decoration: none;
 }
-.page-footer__link:hover {
+.page-footer .menu-item a:hover {
   text-decoration: underline;
+}
+
+.page-footer__list {
+  text-align: center;
+  padding: 32.4px 0px 32.4px 0px;
+  padding: 1.8rem 0rem 1.8rem 0rem;
+  border-bottom: 1px solid #9ccad4;
+  margin-bottom: 1.8rem;
 }
 
 .page-footer__right {
   color: #b2dde7;
   text-align: center;
-  padding-bottom: 32.4px;
-  padding-bottom: 1.8rem;
+  padding-bottom: 32.4px 0px 0px;
+  padding-bottom: 1.8rem 0rem 0rem;
 }
 .page-footer__right a {
   color: white;
@@ -1002,30 +989,39 @@ a {
   padding: 0 10px 0 0;
 }
 
-.side-menu__item {
-  list-style: none;
-  margin-bottom: 5.4px;
-  margin-bottom: 0.3rem;
+.side-menu > ul > .menu-item {
+  display: none;
 }
 
-.side-menu__title {
+.side-menu > ul > .menu-item.current-page-ancestor, .side-menu > ul > .menu-item.current-menu-item {
+  display: block;
+}
+
+.side-menu > ul > .menu-item > a {
   font-weight: 300;
   color: #c2725d;
   font-size: 30.6px;
   font-size: 1.7rem;
   margin: 0px 0px 12.6px 0px;
   margin: 0rem 0rem 0.7rem 0rem;
+  text-decoration: none;
 }
 
-.side-menu__link {
+.sub-menu li {
+  list-style: none;
+  margin-bottom: 5.4px;
+  margin-bottom: 0.3rem;
+}
+
+.sub-menu a {
   text-decoration: none;
   color: #7fa2aa;
 }
-.side-menu__link:hover {
+.sub-menu a:hover {
   color: #c2725d;
 }
 
-.side-menu__link--active {
+.sub-menu .current-menu-item a {
   color: #c2725d;
   font-weight: 700;
 }

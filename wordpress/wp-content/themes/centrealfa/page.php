@@ -7,8 +7,11 @@
       </div><!--
       --><div class="layout__item u-7/10 main-content__main">
        <h1><?php the_title();?></h1>
+       <?php if(have_posts()):
+         while(have_posts()):the_post();
+         ?>
        <?php the_content(); ?>
-       <div class="clearfix paginate"><a href="" class="paginate__prev button float-left">Public concerné</a><a href="#" class="paginate__next button float-right">Un conte pour les enfants</a></div>
+     <?php endwhile;endif;?>
      </div>
    </div>
  </div>

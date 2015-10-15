@@ -53,6 +53,18 @@ function register_my_menus() {
        'supports'  => array( 'title')
        )
     );
+    register_post_type( 'tarifs',
+        array(
+            'labels' => array(
+                'name' => __( 'Tarifs' ),
+                'singular_name' => __( 'Tarif' ),
+                'add_new_item' => __('Ajouter un tarif')
+            ),
+        'public' => true,
+        'has_archive' => false,
+        'supports'  => array( 'title')
+        )
+     );
   }
 
   function create_tax() {

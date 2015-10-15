@@ -707,26 +707,6 @@ a {
   background-size: 60px;
 }
 
-.site-nav.fixed {
-  padding: 25px 0 15px;
-}
-.site-nav.fixed > ul > .menu-item > a {
-  font-size: 21.6px;
-  font-size: 1.2rem;
-  padding-top: 50px;
-}
-.site-nav.fixed .site-nav__logo {
-  width: 100px;
-  height: 70px;
-}
-.site-nav.fixed .sub-menu {
-  padding-top: 14px;
-}
-.site-nav.fixed .menu-item {
-  margin-bottom: 2px;
-  background-size: 40px;
-}
-
 .page-head {
   background: white;
   width: 100%;

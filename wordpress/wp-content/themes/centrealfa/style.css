@@ -513,7 +513,7 @@ a {
   text-decoration: underline;
 }
 
-.button {
+.button, body .ninja-forms-form input[type="submit"] {
   background: #484a57;
   border: 1px solid;
   padding: 10px 30px;
@@ -523,7 +523,7 @@ a {
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-.button:hover {
+.button:hover, body .ninja-forms-form input[type="submit"]:hover {
   background-color: #c2725d;
 }
 
@@ -752,38 +752,41 @@ a {
   font-family: "Roboto Condensed", sans-serif;
 }
 
-.form__label {
-  margin: 21.6px 0px 7.2px 0px;
-  margin: 1.2rem 0rem 0.4rem 0rem;
+body .ninja-forms-form label {
+  margin: 36px 0px 7.2px 0px;
+  margin: 2rem 0rem 0.4rem 0rem;
   font-size: 21.6px;
   font-size: 1.2rem;
   color: #7fa2aa;
   font-weight: 300;
   display: block;
 }
-
-.form__text, .form__area {
+body .ninja-forms-form input[type="text"], body .ninja-forms-form input[type="number"], body .ninja-forms-form input[type="email"] {
   display: block;
   width: 100%;
+  color: #8b9294;
   border: 1px solid #e3ecef;
   border-width: 0px 0px 2px 0px;
   padding: 0px 7.2px 7.2px 7.2px;
   padding: 0rem 0.4rem 0.4rem 0.4rem;
 }
-.form__text:focus, .form__area:focus {
+body .ninja-forms-form input[type="text"]:focus, body .ninja-forms-form input[type="number"]:focus, body .ninja-forms-form input[type="email"]:focus {
   box-shadow: inset -4px -11px 0px -6px #c2725d;
   outline: none;
 }
-
-.form__area {
+body .ninja-forms-form textarea {
+  display: block;
+  width: 100%;
+  border: 1px solid #e3ecef;
+  padding: 0px 7.2px 7.2px 7.2px;
+  padding: 0rem 0.4rem 0.4rem 0.4rem;
   border-width: 0px 0px 2px 2px;
 }
-.form__area:focus {
+body .ninja-forms-form textarea:focus {
   border-color: #c2725d;
   border-width: 0 0 2px 2px;
 }
-
-.form__submit {
+body .ninja-forms-form input[type="submit"] {
   border: none;
   display: inline-block;
   margin: 36px 0px 0px 0px;
@@ -793,7 +796,7 @@ a {
   padding-left: 50px;
   padding-right: 50px;
 }
-.form__submit:focus {
+body .ninja-forms-form input[type="submit"]:focus {
   outline: none;
 }
 

@@ -65,6 +65,18 @@ function register_my_menus() {
         'supports'  => array( 'title')
         )
      );
+     register_post_type( 'jobs',
+         array(
+             'labels' => array(
+                 'name' => __( 'Jobs et Stages' ),
+                 'singular_name' => __( 'Job' ),
+                 'add_new_item' => __('Ajouter un Job ou un Stage')
+             ),
+         'public' => true,
+         'has_archive' => false,
+         'supports'  => array( 'title','editor')
+         )
+      );
   }
 
   function create_tax() {
@@ -84,6 +96,15 @@ function register_my_menus() {
         'label' => __( 'Fonction' ),
         'rewrite' => array( 'slug' => 'fonction' ),
         'hierarchical' => true,
+      )
+    );
+    register_taxonomy(
+      'type',
+      'jobs',
+      array(
+        'label' => __( 'Type d\'engagement' ),
+        'rewrite' => array( 'slug' => 'type' ),
+        'hierarchical' => false,
       )
     );
   }

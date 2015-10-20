@@ -1,0 +1,22 @@
+
+.tarif{
+  padding:0 !important;
+}
+.tarif__container{
+  padding:3% 10% 3% 0 ;
+  height:250px;
+}
+.tarif__title{
+  @include rem-fallback(font-size,1.4rem);
+  @include rem-fallback(margin,0);
+}
+.tarif__prix{
+  @include rem-fallback(margin,0.5,0);
+  @include rem-fallback(font-size,0.9);
+}
+.tarif__rem{
+  background: $tarif-background;
+  @include rem-fallback(font-size,0.8);
+  padding:10px;
+  color:$nav-color;
+}

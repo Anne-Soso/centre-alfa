@@ -1,0 +1,11 @@
+.tabalfa{
+  text-decoration:none;
+  @include rem-fallback(margin-top,7rem);
+  padding:30px 30px 30px 100px;
+  @include rem-fallback(font-size,1.5rem);
+  font-weight: 300;
+  background-image: url('img/socialnetwork12.svg');
+  background-repeat:no-repeat;
+  background-position:20px center;
+
+}

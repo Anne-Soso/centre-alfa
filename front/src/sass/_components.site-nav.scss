@@ -1,71 +1,7 @@
 .site-nav{
   padding:15px 0 25px;
-
-  .menu-item{
-    display:inline-block;
-    position:relative;
-    margin-top:0;
-    @include rem-fallback(margin-left,3rem);
-    &:hover{
-      .sub-menu{
-        display:block;
-      }
-    }
-  }
-  .menu-item>a{
-    @include rem-fallback(font-size,1.4rem);
-    font-family: $font-title;
-    padding-top:70px;
-    color:$nav-color;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 300;
-    @include transition(all 0.5s);
-    &:hover{
-      color:$text-color;
-      svg{
-        opacity:0.7;
-      }
-    }
-  }
-
-  .site-nav__home{
-    display: inline-block;
-    @include rem-fallback(margin-top,0.2);
-    text-decoration: none;
-  }
-
-  .sub-menu{
-    position:absolute;
-    left:50%;
-    margin-left:-125px;
-    z-index:100;
-    padding-top:25px;
-    display:none;
-
-  }
-  .sub-menu>li{
-    list-style:none;
-    background: $link-color;
-    margin:0 0 2px 0;
-    @include transition(all 0.3s);
-    &:hover{
-      background: $nav-color;
-    }
-  }
-  .sub-menu>li>a{
-    padding:10px 17px;
-    width:250px;
-    color:white;
-    text-align: left;
-    @include rem-fallback(font-size,1.2);
-    font-weight: 300;
-    text-decoration:none;
-    display:block;
-    &:hover{
-      color: white;
-    }
+  @media #{$portable}{
+    position:static !important;
   }
 
   .about{
@@ -87,5 +23,125 @@
   .risk{
     background:url('img/warning41.svg') no-repeat center top;
     background-size:60px;
+  }
+  .menu-item{
+    display:inline-block;
+    position:relative;
+    margin-top:0;
+    @include rem-fallback(margin-left,3rem);
+    &:hover{
+      .sub-menu{
+        display:block;
+      }
+    }
+    @media #{$small-desk}{
+      background-size:40px;
+    }
+    @media #{$portable}{
+      display:block;
+      margin:0;
+      background-position: 10px 10px;
+        margin-bottom:20px;
+    }
+  }
+  .menu-item>a{
+    @include rem-fallback(font-size,1.4rem);
+    font-family: $font-title;
+    padding-top:70px;
+    color:$nav-color;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 300;
+    @include transition(all 0.5s);
+    &:hover{
+      color:$text-color;
+      svg{
+        opacity:0.7;
+      }
+    }
+    @media #{$small-desk}{
+      @include rem-fallback(font-size,1.2rem);
+      padding-top:50px;
+    }
+    @media #{$portable}{
+      padding:10px 0 0 100px;
+      @include rem-fallback(font-size,1.4rem);
+    }
+  }
+
+  .site-nav__home{
+    display: inline-block;
+    @include rem-fallback(margin-top,0.2);
+    text-decoration: none;
+    svg{
+      @media #{$small-desk}{
+        width:100px;
+        height:75px;
+      }
+
+    }
+    @media #{$portable}{
+      display:block;
+      margin:auto;
+      width:100px;
+      margin-bottom:10px;
+    }
+
+  }
+
+  .sub-menu{
+    position:absolute;
+    left:50%;
+    margin-left:-125px;
+    z-index:100;
+    padding-top:25px;
+    display:none;
+    @media #{$portable}{
+      display:block;
+      position:static;
+      margin:0;
+      padding:10px 0 0 100px;
+    }
+
+  }
+  .sub-menu>li{
+    list-style:none;
+    background: $link-color;
+    margin:0 0 2px 0;
+    @include transition(all 0.3s);
+    &:hover{
+      background: $nav-color;
+      @media #{$portable}{
+        color:$link-color;
+      }
+    }
+    @media #{$portable}{
+      background:transparent;
+    }
+  }
+  .sub-menu>li>a{
+    padding:10px 17px;
+    width:250px;
+    color:white;
+    text-align: left;
+    @include rem-fallback(font-size,1.2);
+    font-weight: 300;
+    text-decoration:none;
+    display:block;
+    &:hover{
+      color: white;
+    }
+    @media #{$portable}{
+      color:$nav-color;
+      width:auto;
+    }
+  }
+
+
+}
+#menu-header-menu{
+  @media #{$portable}{
+    float:none;
   }
 }

@@ -25,8 +25,27 @@ $footer-color: #9ccad4;
 $background-color : #484a57;
 $page-background-color : white;
 $light-background: #eef2f4;
+$tarif-background: #dae3e8;
 $background-dark: #67545a;
 $background-pres: #dee8ee;
 
 $font-default: 'Roboto', sans-serif;
 $font-title: 'Roboto Condensed', sans-serif;
+
+$breakpoints: (
+    "palm"          "screen and (max-width: 719px)",
+    "lap"           "screen and (min-width: 720px) and (max-width: 1023px)",
+    "lap-and-up"    "screen and (min-width: 720px)",
+    "portable"      "screen and (max-width: 1023px)",
+    "small-desk"          "screen and (max-width: 1279px)",
+    "desk"    "screen and (min-width: 1280px)",
+    "retina"        "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)"
+);
+$full : "screen and (min-width: 1440px)";
+$desk: "screen and min-width: 1280px";
+$small-desk : "screen and (max-width:1279px)";
+$portable : "screen and (max-width: 1023px)";
+$retina : "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx)";
+$lap-and-up : "screen and (min-width: 720px)";
+$lap : "screen and (min-width: 720px) and (max-width: 1023px)";
+$palm : "screen and (max-width: 719px)";
